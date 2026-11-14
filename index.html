@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jana Cleofe Motas | General Virtual Assistant</title>
+<meta name="description" content="General Virtual Assistant in Baguio City, Philippines. I manage inboxes and calendars, answer customer emails, organise files and keep spreadsheets up to date. Available full time.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jana Cleofe Motas | General Virtual Assistant">
+<meta property="og:description" content="I declutter inboxes, answer customer emails with care and keep your spreadsheets up to date.">
+<meta property="og:image" content="profile.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#6D3AA8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236D3AA8'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='white'%3EJM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#6D3AA8;--accent-dark:#4F2A7B;--accent-tint:#F1EAF8;
+  --ink:#1F1A27;--muted:#5A5465;--line:#E3DFEA;--bg:#FFFFFF;--soft:#F8F7FA;
+  --s1:8px;--s2:16px;--s3:24px;--s4:32px;--s6:48px;--s8:64px;--s12:96px;
+  --shadow:0 1px 2px rgba(31,26,39,.06),0 8px 24px rgba(31,26,39,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.12;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 var(--s3)}
+.skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--ink);padding:8px 16px;z-index:100}
+.skip:focus{left:8px}
+
+/* nav */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:20px;color:var(--ink);text-decoration:none}
+.menu{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:8px 16px;font:500 15px Inter,sans-serif;color:var(--ink);cursor:pointer}
+.links{display:flex;gap:var(--s3);list-style:none;margin:0;padding:0}
+.links a{color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;padding:8px 0;border-bottom:2px solid transparent}
+.links a:hover{border-color:var(--accent)}
+@media(max-width:860px){
+  .menu{display:block}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:#fff;border-bottom:1px solid var(--line);padding:var(--s1) var(--s3) var(--s2)}
+  .links.open{display:flex}
+  .links a{display:block;padding:12px 0;border-bottom:1px solid var(--line)}
+}
+
+/* hero */
+.hero{background:var(--accent);color:#fff;padding:var(--s8) 0 var(--s12)}
+.hero .wrap{display:grid;gap:var(--s6);align-items:center}
+.hero h1{font-size:clamp(38px,6.5vw,72px);font-weight:700;line-height:1.05;max-width:16ch}
+.hero .promise{margin-top:var(--s3);font-size:clamp(19px,2.4vw,24px);max-width:40ch;color:#fff}
+.hero .role{margin-top:var(--s2);font-size:16px;max-width:52ch;color:#EADDF7}
+.actions{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.btn{display:inline-block;padding:16px 28px;border-radius:8px;font-weight:600;font-size:16px;text-decoration:none;border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-main{background:#fff;color:var(--accent-dark)}
+.btn-main:hover{background:var(--accent-tint)}
+.btn-alt{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-alt:hover{background:rgba(255,255,255,.12)}
+.hero :focus-visible{outline-color:#fff}
+.photo{width:min(300px,70vw);aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid rgba(255,255,255,.35);background:var(--accent-dark);display:flex;align-items:center;justify-content:center}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.initials{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:72px;color:#fff}
+@media(min-width:860px){.hero .wrap{grid-template-columns:1.5fr 1fr}.photo{justify-self:end;width:340px}}
+@media(max-width:859px){.photo{order:-1;width:160px}.initials{font-size:48px}}
+
+/* sections */
+section{padding:var(--s12) 0}
+section.alt{background:var(--soft)}
+.sec-head{max-width:640px;margin-bottom:var(--s6)}
+.sec-head h2{font-size:clamp(32px,5vw,48px)}
+.sec-head p{margin-top:var(--s2);color:var(--muted)}
+.cards{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:var(--s4);box-shadow:var(--shadow)}
+.card h3{font-size:24px;margin-bottom:var(--s1)}
+.card p{color:var(--muted)}
+.service{border-top:4px solid var(--accent)}
+
+/* work */
+.work{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(min(100%,460px),1fr))}
+.case{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.shot{aspect-ratio:16/10;background:var(--accent-tint);display:flex;align-items:center;justify-content:center;text-align:center;padding:var(--s3);font-family:Fraunces,Georgia,serif;font-size:24px;color:var(--accent-dark);border-bottom:1px solid var(--line)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block;margin:-24px;padding:0}
+.shot:has(img){padding:0}
+.shot img{margin:0}
+.case .body{padding:var(--s4)}
+.case h3{font-size:26px;margin-bottom:var(--s2)}
+.case dl{margin:0;display:grid;gap:var(--s2)}
+.case dt{font-weight:600;color:var(--accent-dark);font-size:15px}
+.case dd{margin:0;color:var(--ink)}
+.case .result{background:var(--accent-tint);border-radius:8px;padding:var(--s2)}
+
+/* tools */
+.tools{display:grid;gap:var(--s4);grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.tools h3{font-size:20px;margin-bottom:var(--s1);padding-bottom:var(--s1);border-bottom:2px solid var(--accent)}
+.tools p{color:var(--muted)}
+
+/* experience */
+.exp{display:grid;gap:var(--s6)}
+@media(min-width:900px){.exp{grid-template-columns:1fr 1fr}}
+.about p+p{margin-top:var(--s2)}
+.about{max-width:60ch}
+.timeline{list-style:none;margin:0;padding:0 0 0 var(--s3);border-left:2px solid var(--accent)}
+.timeline li{position:relative;padding-bottom:var(--s4)}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:calc(-24px - 7px);top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px #fff}
+.timeline h3{font-size:22px}
+.timeline .when{color:var(--accent-dark);font-weight:600;font-size:15px;margin:4px 0 var(--s1)}
+.timeline p{color:var(--muted)}
+
+/* how */
+.how{display:grid;gap:var(--s3);grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+
+/* contact */
+.contact{background:var(--accent);color:#fff}
+.contact h2{font-size:clamp(36px,6vw,64px);max-width:16ch}
+.contact p{margin-top:var(--s2);max-width:56ch;color:#EADDF7}
+.big{display:block;margin-top:var(--s4);font-family:Fraunces,Georgia,serif;font-weight:700;font-size:clamp(22px,5.2vw,44px);color:#fff;word-break:break-all;text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:2px}
+.contact .actions{margin-top:var(--s4)}
+.contact :focus-visible{outline-color:#fff}
+footer{padding:var(--s4) 0;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn{transition:none}.btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Jana Motas</a>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#how">How I work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" style="padding-top:64px">
+  <div class="wrap">
+    <div>
+      <h1>Your inbox cleared. Your customers answered. Your sheets current.</h1>
+      <p class="promise">Full-time virtual assistant, available to start now.</p>
+      <p class="role">Jana Cleofe Motas, General Virtual Assistant for admin, data entry and customer support</p>
+      <div class="actions">
+        <a class="btn btn-main" href="mailto:motasjanacleofe@gmail.com">Email me</a>
+        <a class="btn btn-alt" href="#work">See my work</a>
+      </div>
+    </div>
+    <div class="photo" id="photo">
+      <img src="profile.png" alt="Portrait of Jana Cleofe Motas" width="340" height="340">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <h2>What I can take off your plate</h2>
+      <p>Pick one task or hand me the whole pile.</p>
+    </div>
+    <div class="cards">
+      <article class="card service"><h3>Inbox management</h3><p>You open your inbox to only what needs you.</p></article>
+      <article class="card service"><h3>Calendar management</h3><p>Meetings booked, moved and confirmed without the back and forth.</p></article>
+      <article class="card service"><h3>Drive and file organisation</h3><p>You find any file in seconds.</p></article>
+      <article class="card service"><h3>Data entry and spreadsheets</h3><p>Your records stay accurate, tidy and up to date.</p></article>
+      <article class="card service"><h3>Customer support</h3><p>Customers get a fast, calm reply. Cases, CRM updates, orders and payments are tracked for you.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="alt">
+  <div class="wrap reveal">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>Four systems I set up, each with the problem, my fix and the result.</p>
+    </div>
+    <div class="work">
+      <article class="case">
+        <div class="shot"><img src="work-1.png" alt="Screenshot of the Gmail filters and labels I set up" loading="lazy"></div>
+        <div class="body">
+          <h3>Inbox management system</h3>
+          <dl>
+            <div><dt>The problem</dt><dd>The inbox was cluttered with unorganised emails.</dd></div>
+            <div><dt>What I did</dt><dd>I created Gmail filters and labels and sorted the messages.</dd></div>
+            <div class="result"><dt>The result</dt><dd>The inbox became clean, with easy email tracking and access.</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="case">
+        <div class="shot"><img src="work-2.png" alt="Screenshot of the organised Google Calendar" loading="lazy"></div>
+        <div class="body">
+          <h3>Calendar management system</h3>
+          <dl>
+            <div><dt>The problem</dt><dd>Appointments overlapped and schedules were disorganised.</dd></div>
+            <div><dt>What I did</dt><dd>I fixed the scheduling conflicts and organised the events in Google Calendar.</dd></div>
+            <div class="result"><dt>The result</dt><dd>The schedule became clear, organised and free of conflicts.</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="case">
+        <div class="shot"><img src="work-3.png" alt="Screenshot of the Google Drive folder structure" loading="lazy"></div>
+        <div class="body">
+          <h3>Document organisation system</h3>
+          <dl>
+            <div><dt>The problem</dt><dd>Files were scattered and named inconsistently.</dd></div>
+            <div><dt>What I did</dt><dd>I created Google Drive folders, sorted the documents and renamed the files.</dd></div>
+            <div class="result"><dt>The result</dt><dd>Documents became organised and easy to find.</dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="case">
+        <div class="shot"><img src="work-4.png" alt="Screenshot of the formatted Google Sheets data" loading="lazy"></div>
+        <div class="body">
+          <h3>Data entry system</h3>
+          <dl>
+            <div><dt>The problem</dt><dd>The information was unstructured and hard to read.</dd></div>
+            <div><dt>What I did</dt><dd>I entered, sorted and formatted the data in Google Sheets.</dd></div>
+            <div class="result"><dt>The result</dt><dd>Records became accurate, organised and easy to read.</dd></div>
+          </dl>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="wrap reveal">
+    <div class="sec-head"><h2>Tools I use</h2></div>
+    <div class="tools">
+      <div><h3>Email and calendar</h3><p>Gmail, Google Calendar</p></div>
+      <div><h3>Files and spreadsheets</h3><p>Google Workspace, Google Sheets, Excel</p></div>
+      <div><h3>Calls and messaging</h3><p>Google Meet, Zoom, Microsoft Teams, WhatsApp</p></div>
+      <div><h3>Writing support</h3><p>ChatGPT</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="alt">
+  <div class="wrap reveal">
+    <div class="sec-head"><h2>Experience</h2></div>
+    <div class="exp">
+      <div class="about">
+        <p>I spent 3 years in customer service, first as a service crew and then as a customer service representative in a BPO. I stayed calm with upset customers, kept clean records and worked to daily targets.</p>
+        <p>I also hold a degree in Forensic Science and I am used to handling confidential information. Now I bring these skills to remote work, with a focus on email management, calendar management, data entry and admin support.</p>
+        <p>I work fast without cutting corners, and I keep learning new tools and workflows.</p>
+      </div>
+      <ol class="timeline">
+        <li>
+          <h3>Customer Service Representative</h3>
+          <p class="when">BPO company, 2024 to 2026</p>
+          <p>Handled inbound customer calls. Logged every case in a CRM and ticketing system. Met handle-time, CSAT and QA targets.</p>
+        </li>
+        <li>
+          <h3>Service Crew</h3>
+          <p class="when">Restaurant, 2018 to 2019</p>
+          <p>Helped customers and handled complaints. Handled cash and POS transactions accurately. Counted and tracked inventory. Hit sales targets and upsold products.</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap reveal">
+    <div class="sec-head"><h2>How I work</h2></div>
+    <div class="how">
+      <article class="card"><h3>Availability</h3><p>Full time. Available to start now.</p></article>
+      <article class="card"><h3>Based in</h3><p>Baguio City, Philippines, working remotely.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap reveal">
+    <h2>Let's clear your to-do list</h2>
+    <p>Send me a short note about what is piling up. I will reply with how I can help.</p>
+    <a class="big" href="mailto:motasjanacleofe@gmail.com">motasjanacleofe@gmail.com</a>
+    <div class="actions">
+      <a class="btn btn-main" href="mailto:motasjanacleofe@gmail.com">Email me</a>
+      <a class="btn btn-alt" href="https://www.onlinejobs.ph/jobseekers/info/5495819" target="_blank" rel="noopener">View my OnlineJobs.ph profile</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="year"></span> Jana Cleofe Motas. Baguio City, Philippines.</div>
+</footer>
+
+<script>
+(function(){
+  // footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // mobile menu
+  var menu = document.getElementById('menu'), links = document.getElementById('links');
+  menu.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    menu.setAttribute('aria-expanded', open);
+  });
+  links.addEventListener('click', function(e){
+    if (e.target.tagName === 'A') { links.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }
+  });
+
+  // image fallbacks
+  function profileFallback(img){
+    var d = document.createElement('div');
+    d.className = 'initials'; d.setAttribute('role', 'img');
+    d.setAttribute('aria-label', 'Initials JM'); d.textContent = 'JM';
+    img.replaceWith(d);
+  }
+  function workFallback(img){
+    var box = img.parentNode, title = img.closest('.case').querySelector('h3').textContent;
+    box.textContent = title;
+  }
+  document.querySelectorAll('.photo img').forEach(function(img){
+    img.addEventListener('error', function(){ profileFallback(img); });
+    if (img.complete && img.naturalWidth === 0) profileFallback(img);
+  });
+  document.querySelectorAll('.shot img').forEach(function(img){
+    img.addEventListener('error', function(){ workFallback(img); });
+    if (img.complete && img.naturalWidth === 0) workFallback(img);
+  });
+
+  // fade-in on scroll
+  var els = document.querySelectorAll('.reveal');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.08 });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
